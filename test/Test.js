@@ -7,23 +7,17 @@ let result = runWorker
 // console.log("runSimpleAsyncWorker returned '"+result+"'.");
 
 
- // let result = runWorker.runAsyncWorker(2, onComplete);
+  result = runWorker.runAsyncWorker(onComplete, "select * from test1;");
  // console.log("runSimpleAsyncWorker returned '"+result+"'.");
+  result = runWorker.runAsyncWorker(onComplete, "select * from a1;");
 
-// result = runWorker.runAsyncWorker(4, onComplete);
-// console.log("runSimpleAsyncWorker returned '"+result+"'.");
-//
-// result = runWorker.runAsyncWorker(8, onComplete);
-// console.log("runSimpleAsyncWorker returned '"+result+"'.");
-
-
+result = runWorker.runAsyncWorker(onComplete, "select * from imgs;");
 
 
 function onComplete (err, result) {
     if (err) {
          console.log("runAsyncWorker returned an error: ", err);
     } else {
-
-        console.log("runAsyncWorker returned: "+ result[0],result[1],result[2]);
+        console.log(`runAsyncWorker returned: tuples = ${result.ntuples}  fields = ${result.nfields}`);
     }
 }
