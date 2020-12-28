@@ -11,6 +11,8 @@
   },
   "gypfile": true,
   "keywords": [
+    "PostgreSQL",
+    "libpq",
     "node",
     "napi",
     "n-api",
