@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "main": "test/Test.js",
   "dependencies": {
-    "node-addon-api": "^1.1.0"
+    "node-addon-api": "^3.1.0"
   },
   "scripts": {
     "test": "node --napi-modules ./test/Test.js"
@@ -16,8 +16,7 @@
     "n-api",
     "async",
     "asyncworker"
-
   ],
   "author": "Yuriy Dmitriev",
-  "license": "GPL"
+  "license": "GPL-3.0-or-later"
 }
