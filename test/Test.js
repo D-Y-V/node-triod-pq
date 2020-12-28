@@ -1,23 +1,17 @@
-const runWorker = require('../build/Release/napi-asyncworker-example-native');
+const runWorker = require('../build/Release/node-triod-pq.node');
 
 
 
-let result = runWorker
-    .runAsyncWorker( onComplete, 'SELECT * FROM test1 WHERE t = $1 and i = $2', "joe's place", '1');
-// console.log("runSimpleAsyncWorker returned '"+result+"'.");
-
-
-  result = runWorker.runAsyncWorker(onComplete, "select * from test1;");
- // console.log("runSimpleAsyncWorker returned '"+result+"'.");
-  result = runWorker.runAsyncWorker(onComplete, "select * from a1;");
-
-result = runWorker.runAsyncWorker(onComplete, "select * from imgs;");
+runWorker.runAsyncWorker(onComplete, 'SELECT * FROM test1 WHERE t = $1 and i = $2', "joe's place", '1');
+runWorker.runAsyncWorker(onComplete, "select * from test1;");
+runWorker.runAsyncWorker(onComplete, "select * from a1;");
+runWorker.runAsyncWorker(onComplete, "select * from imgs;");
 
 
 function onComplete (err, result) {
     if (err) {
-         console.log("runAsyncWorker returned an error: ", err);
+        console.log("runAsyncWorker returned an error: ", err);
     } else {
-        console.log(`runAsyncWorker returned: tuples = ${result.ntuples}  fields = ${result.nfields}`);
+        console.log(`runAsyncWorker returned: tuples = ${result.ntuples}  fields = ${result.nfields} first element is ${result[0]}`);
     }
 }
