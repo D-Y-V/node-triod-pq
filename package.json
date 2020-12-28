@@ -1,6 +1,6 @@
 {
-  "name": "napi-asyncworker-example",
-  "description": "An example project showing how to use the Node.js N-API AsyncWorker class",
+  "name": "node-triod-pq",
+  "description": "Project for async non blocking queries from Node.js to libpq. N-API AsyncWorker class",
   "version": "1.0.0",
   "main": "test/Test.js",
   "dependencies": {
@@ -15,9 +15,9 @@
     "napi",
     "n-api",
     "async",
-    "asyncworker",
-    "example"
+    "asyncworker"
+
   ],
-  "author": "Jim Schlight",
-  "license": "MIT"
+  "author": "Yuriy Dmitriev",
+  "license": "GPL"
 }

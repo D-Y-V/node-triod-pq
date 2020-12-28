@@ -1,7 +1,7 @@
 {
   'targets': [
     {
-      'target_name': 'napi-asyncworker-example-native',
+      'target_name': 'node-triod-pq',
       'sources': [ 'src/RunAsyncWorker.cc', 'src/pqAsyncWorker.cc' ],
       'include_dirs': ["<!@(node -p \"require('node-addon-api').include\")"],
       'dependencies': ["<!(node -p \"require('node-addon-api').gyp\")"],
