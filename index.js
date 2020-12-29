@@ -1,1 +1,1 @@
-require('../build/Release/node-triod-pq.node');
+module.exports = require('./build/Release/node-triod-pq.node');

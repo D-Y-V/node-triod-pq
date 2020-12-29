@@ -29,8 +29,8 @@ Value runAsyncWorker(const CallbackInfo& info) {
 };
 
 Object Init(Env env, Object exports) {
-    exports["runAsyncWorker"] = Function::New(
-            env, runAsyncWorker, std::string("runAsyncWorker"));
+    exports["run"] = Function::New(
+            env, runAsyncWorker, std::string("run"));
     return exports;
 }
 
