@@ -23,4 +23,5 @@ private:
     PGresult   *res;
     int nfields;
     int ntuples;
+    std::string res_status;
 };

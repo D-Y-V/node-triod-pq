@@ -25,6 +25,7 @@ void pqAsyncWorker::Execute() {
     } else{
         res = PQexec(conn, sql.c_str());
     }
+    res_status = PQresStatus(PQresultStatus(res));
     nfields = PQnfields(res);
     ntuples = PQntuples(res);
     for (int i = 0; i< ntuples; i++)
@@ -51,5 +52,6 @@ void pqAsyncWorker::OnOK() {
     }
     ret_tmp.Set("ntuples", Napi::Number::New( env, ntuples ));
     ret_tmp.Set("nfields", Napi::Number::New( env, nfields ));
+    ret_tmp.Set("ExecStatus", Napi::String::New( env, res_status ));
     Callback().Call({Env().Null(), ret_tmp});
 };
