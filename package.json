@@ -1,7 +1,7 @@
 {
   "name": "node-triod-pq",
   "description": "Project for async non blocking queries from Node.js to libpq. N-API AsyncWorker class",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "dependencies": {
     "node-addon-api": "^3.1.0"
